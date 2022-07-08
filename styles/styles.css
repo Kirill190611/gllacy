@@ -912,7 +912,7 @@ img {
   align-items: center;
   flex-wrap: wrap;
   width: 823px;
-  margin-bottom: 95px;
+  margin-bottom: 80px;
 }
 
 .filter-form__group {
@@ -920,7 +920,7 @@ img {
   justify-content: space-between;
   border: none;
   padding: 0;
-  margin: 0 24px 0 0;
+  margin: 0 24px 16px 0;
 }
 
 .filter-form__title {
@@ -933,6 +933,7 @@ img {
 }
 
 .filter-form__select {
+  font-family: inherit;
   font-size: 14px;
   line-height: 20px;
   width: 196px;
@@ -964,7 +965,7 @@ img {
 
 .range-bar {
   position: absolute;
-  width: 56px;
+  width: 72px;
   height: 2px;
   left: 32px;
   background-color: var(--main-text-color);
@@ -1000,8 +1001,93 @@ img {
 }
 
 .filter-form__group--radio {
-  width: 383px;
   margin-right: 0;
+}
+
+.filter-form__list {
+  display: flex;
+  justify-content: space-between;
+  min-width: 383px;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--additional-text-color);
+  padding: 8px 24px;
+  margin: 0;
+  list-style-type: none;
+  background-color: rgba(252, 252, 252, 0.3);
+  border-radius: 18px;
+}
+
+.filter-form__item {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.filter-form__item:not(:last-child) {
+  margin-right: 16px;
+}
+
+.control {
+  position: relative;
+  display: block;
+  padding-left: 24px;
+}
+
+.control-mark {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border: 1px solid var(--additional-text-color);
+  border-radius: 50%;
+  top: 2px;
+  left: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.control-input[type="radio"]:checked + .control-mark::after {
+  position: absolute;
+  content: "";
+  width: 6px;
+  height: 6px;
+  background-color: var(--additional-text-color);
+  border-radius: 50%;
+}
+
+.filter-form__list--checkbox {
+  padding: 9px 24px;
+}
+
+.control-input[type="checkbox"] + .control-mark {
+  border: none;
+  border-radius: 0;
+  background: url("../images/icons/checkbox.svg") no-repeat;
+}
+
+.control-input[type="checkbox"]:checked + .control-mark {
+  background: none;
+}
+
+.control-input[type="checkbox"]:checked + .control-mark::after {
+  position: absolute;
+  content: "";
+  width: 16px;
+  height: 16px;
+  background: url("../images/icons/checkbox-mark.svg") no-repeat;
+  top: 0;
+  left: 0;
+}
+
+.button--form {
+  min-width: 189px;
+  background-color: rgba(252, 252, 252, 0.3);
+  padding: 8px 52px;
+  border: 2px solid var(--button-color);
+  margin: 12px 0 0 -5px;
 }
 
 .product-inner {
