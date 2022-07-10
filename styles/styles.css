@@ -1141,6 +1141,15 @@ img {
   background: rgba(252, 252, 252, 0.3) url("../images/icons/arrow-select.svg") no-repeat 167px center;
 }
 
+.filter-form__select:hover {
+  background-color: rgba(252, 252, 252, 0.5);
+}
+
+.filter-form__select:focus {
+  background-color: rgba(252, 252, 252, 0.4);
+  outline: 2px solid var(--button-color);
+}
+
 .range-container {
   display: flex;
   justify-content: center;
@@ -1172,21 +1181,12 @@ img {
   position: absolute;
   width: 16px;
   height: 16px;
-  background-color: var(--additional-text-color);
-  border: none;
+  background-color: var(--button-color);
+  border: 6px solid var(--additional-text-color);
   top: -7px;
   border-radius: 50%;
-}
-
-.range-toggle::after {
-  position: absolute;
-  content: "";
-  width: 4px;
-  height: 4px;
-  top: 6px;
-  left: 6px;
-  background-color: var(--button-color);
-  border-radius: 50%;
+  box-sizing: border-box;
+  padding: 0;
 }
 
 .toggle-min {
@@ -1195,6 +1195,23 @@ img {
 
 .toggle-max {
   right: -8px;
+}
+
+.range-toggle:hover {
+  background-color: var(--additional-text-color);
+  border-color: var(--button-color);
+}
+
+.range-toggle:focus {
+  background-color: var(--additional-text-color);
+  border-color: var(--button-color);
+  outline: 2px solid var(--additional-text-color);
+}
+
+.range-toggle:active {
+  background-color: var(--additional-text-color);
+  border-color: var(--additional-text-color);
+  outline: none;
 }
 
 .filter-form__group--radio {
