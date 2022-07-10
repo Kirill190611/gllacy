@@ -279,15 +279,46 @@ img {
   box-sizing: border-box;
   border-radius: 26px;
   border: 2px solid var(--button-color);
+  background-color: rgba(252, 252, 252, 0.3);
 }
 
-.slider-control__button--previous {
-  background: rgba(252, 252, 252, 0.3) url("../images/icons/arrow.svg") no-repeat 11px 11px;
+.slider-control__icon {
+  fill: var(--button-color);
 }
 
 .slider-control__button--next {
-  background: rgba(252, 252, 252, 0.3) url("../images/icons/arrow.svg") no-repeat 11px 11px;
   transform: rotate(180deg);
+}
+
+.slider-control__button:hover {
+  cursor: pointer;
+  background-color: var(--button-color);
+}
+
+.slider-control__button:hover .slider-control__icon {
+  fill: var(--additional-text-color);
+}
+
+.slider-control__button:focus {
+  border: 2px solid var(--additional-text-color);
+  outline: none;
+}
+
+.slider-control__button:focus .slider-control__icon {
+  fill: var(--additional-text-color);
+}
+
+.slider-control__button:active {
+  background-color: rgba(252, 252, 252, 0.5);
+  border: none;
+}
+
+.slider-control__button:active .slider-control__icon {
+  fill: var(--additional-text-color);
+}
+
+.slider-control__button:disabled {
+  opacity: 0.4;
 }
 
 .button {
@@ -540,6 +571,42 @@ img {
 
 .product__icon {
   fill: var(--button-color);
+}
+
+.product__button:hover {
+  background-color: rgba(252, 252, 252, 0.3);
+  border: 2px solid var(--button-secondary-color);
+}
+
+.product__button:hover .product__icon {
+  fill: #000000;
+}
+
+.product__button:focus {
+  background-color: var(--button-secondary-color);
+  border: 2px solid var(--additional-text-color);
+  outline: none;
+}
+
+.product__button:focus .product__icon {
+  fill: var(--button-color);
+}
+
+.product__button:active {
+  background-color: #FFCBD8;
+  border: 2px solid var(--button-secondary-color);
+}
+
+.product__button:active .product__icon {
+  fill: var(--additional-text-color);
+}
+
+.product__button--disabled {
+  background-color: #B9B9B9;
+}
+
+.product__button--disabled .product__icon {
+  fill: #565C66;
 }
 
 .advantages {
@@ -1144,6 +1211,26 @@ img {
   padding: 8px 52px;
   border: 2px solid var(--button-color);
   margin: 12px 0 0 -5px;
+}
+
+.button--form:hover {
+  background-color: var(--button-color);
+  border: 2px solid rgba(252, 252, 252, 0.3);
+}
+
+.button--form:focus {
+  background-color: rgba(252, 252, 252, 0.3);
+  border: none;
+  outline: 2px solid var(--additional-text-color);
+}
+
+.button--form:active {
+  background-color: rgba(252, 252, 252, 0.5);
+  border-color: rgba(252, 252, 252, 0.5);
+}
+
+.button--form:disabled {
+  opacity: 0.4;
 }
 
 .product-inner {
