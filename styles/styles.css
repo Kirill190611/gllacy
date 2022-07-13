@@ -1309,6 +1309,23 @@ img {
   left: 0;
 }
 
+.control-input[type="checkbox"]:hover + .control-mark {
+  background: url("../images/icons/checkbox-hover.svg") no-repeat;
+}
+
+.control-input[type="checkbox"]:checked:hover + .control-mark {
+  background: none;
+}
+
+.control-input[type="checkbox"]:hover + .control-mark::after {
+  background: url("../images/icons/checkbox-hover-active.svg") no-repeat;
+}
+
+.control-input[type="checkbox"]:disabled + .control-mark,
+.control-input[type="checkbox"]:disabled + .control-mark::after {
+  opacity: 0.4;
+}
+
 .button--form {
   min-width: 189px;
   background-color: rgba(252, 252, 252, 0.3);
