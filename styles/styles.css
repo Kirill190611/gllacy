@@ -1551,3 +1551,138 @@ img {
   border-radius: 4px;
   resize: none;
 }
+
+.modal-container-closed {
+  display: none;
+}
+
+.popover {
+  font-family: inherit;
+  background-color: var(--button-color);
+  border-radius: 4px;
+  padding: 48px;
+  z-index: 1;
+  filter: drop-shadow(0 15px 40px rgba(45, 52, 64, 0.12));
+  box-sizing: border-box;
+  display: none;
+}
+
+.navigation-user__item--cart {
+  position: relative;
+}
+
+.popover-cart {
+  position: absolute;
+  width: 441px;
+  padding: 48px 48px 44px 44px;
+  top: 38px;
+  right: 0;
+}
+
+.popover__title {
+  font-size: 24px;
+  line-height: 30px;
+  color: var(--additional-text-color);
+  margin: 0 0 32px;
+}
+
+.popover-cart__list {
+  position: relative;
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 700;
+  color: var(--additional-text-color);
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 60px
+}
+
+.popover-cart__list::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: #E7E7E7;
+  bottom: -31px;
+}
+
+.popover-cart__item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.popover-cart__item:last-child {
+  margin-bottom: 0;
+}
+
+.popover-cart__image {
+  display: block;
+  margin-right: 16px;
+}
+
+.popover-cart__product-description {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-right: auto;
+}
+
+.popover-cart__product-name {
+  margin: 0 0 4px;
+}
+
+.popover-cart__product-quantity {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #B9B9B9;
+  margin: 0;
+}
+
+.popover-cart__product-price {
+  margin: 0 52px 0 0;
+}
+
+.popover-cart__button {
+  display: block;
+  width: 20px;
+  min-height: 20px;
+  border: none;
+  background: transparent url("../images/icons/close-popover.svg") no-repeat center;
+}
+
+.popover-cart__button:hover {
+  cursor: pointer;
+}
+
+.popover-cart__total-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.popover-cart__summary {
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 700;
+  color: var(--additional-text-color);
+}
+
+.popover-cart--empty {
+  width: 288px;
+  padding: 48px 20px;
+  display: none;
+}
+
+.popover__title--empty {
+  margin: 0;
+  text-align: center;
+}
+
+.popover--open {
+  display: block;
+}
