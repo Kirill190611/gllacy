@@ -100,6 +100,10 @@ img {
   list-style-type: none;
 }
 
+.site-navigation__item {
+  position: relative;
+}
+
 .site-navigation__link {
   display: block;
   line-height: 20px;
@@ -138,6 +142,7 @@ img {
 }
 
 .navigation-user__item {
+  position: relative;
   padding: 0;
   margin-right: 17px;
 }
@@ -1567,10 +1572,6 @@ img {
   display: none;
 }
 
-.navigation-user__item--cart {
-  position: relative;
-}
-
 .popover-cart {
   position: absolute;
   width: 441px;
@@ -1683,10 +1684,6 @@ img {
   text-align: center;
 }
 
-.navigation-user__item--entry {
-  position: relative;
-}
-
 .popover-entry {
   position: absolute;
   width: 420px;
@@ -1695,13 +1692,16 @@ img {
   right: 0;
 }
 
-.popover-entry__form {
+.popover-entry__form,
+.popover-search__form {
   display: grid;
   grid-template-columns: 121px 1fr;
   gap: 16px 19px;
 }
 
-.popover-entry__input {
+.popover-entry__input,
+.popover-search__input {
+  position: relative;
   font-family: inherit;
   font-size: 16px;
   line-height: 20px;
@@ -1734,6 +1734,78 @@ img {
   border-bottom: 1px solid var(--additional-text-color);
 }
 
+.popover-search {
+  position: absolute;
+  width: 356px;
+  padding: 24px 16px;
+  top: 38px;
+  right: 0;
+}
+
+.popover-catalog {
+  position: absolute;
+  width: 138px;
+  padding: 8px 0;
+  top: 45px;
+  left: 0;
+}
+
+.popover-catalog__list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.popover-catalog__item--active {
+  position: relative;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.popover-catalog__item--active::after {
+  position: absolute;
+  content: "";
+  width: 103px;
+  height: 1px;
+  background-color: #B9B9B9;
+  top: 40px;
+  left: 16px;
+  right: 16px;
+}
+
+.popover-catalog__link {
+  display: block;
+  width: 100%;
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--additional-text-color);
+  text-decoration: none;
+  padding: 8px 16px;
+  box-sizing: border-box;
+}
+
 .popover--open {
+  display: block;
+}
+
+.popover-search__button {
+  position: absolute;
+  display: block;
+  width: 16px;
+  height: 16px;
+  background: transparent url("../images/icons/close.svg") no-repeat center;
+  border: none;
+  top: 40px;
+  right: 29px;
+  display: none;
+}
+
+.navigation-user__link--search:active + .popover-search,
+.navigation-user__link--login:active + .popover-entry,
+.navigation-user__link--cart:active + .popover-cart {
+  display: block;
+}
+
+.site-navigation__link--catalog:hover + .popover-catalog {
   display: block;
 }
