@@ -1809,3 +1809,35 @@ img {
 .site-navigation__link--catalog:hover + .popover-catalog {
   display: block;
 }
+
+.input:hover,
+.popover-entry__input:hover,
+.popover-search__input:hover {
+  color: var(--additional-text-color);
+  border-color: var(--additional-text-color);
+}
+
+.input:focus,
+.popover-entry__input:focus,
+.popover-search__input:focus   {
+  outline: 1px solid var(--additional-text-color);
+  border-color: var(--additional-text-color);
+}
+
+.input-error {
+  border-color: #EA5454;
+}
+
+.input-error:hover {
+  border-color: #EA5454;
+  outline: 1px solid #EA5454;
+}
+
+.input-disabled {
+  background-color: #E7E7E7;
+  opacity: 0.65;
+}
+
+.input-disabled:hover {
+  opacity: 1;
+}
