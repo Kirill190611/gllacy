@@ -139,6 +139,7 @@ img {
   font-size: 14px;
   min-width: 431px;
   justify-content: flex-end;
+  margin-left: auto;
 }
 
 .navigation-user__item {
