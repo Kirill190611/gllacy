@@ -929,6 +929,7 @@ img {
   line-height: 20px;
   font-weight: 700;
   color: var(--additional-text-color);
+  margin-right: 4px;
   margin-bottom: 8px;
 }
 
@@ -1840,4 +1841,65 @@ img {
 
 .input-disabled:hover {
   opacity: 1;
+}
+
+.tooltip__container {
+  display: flex;
+  align-items: center;
+}
+
+.tooltip {
+  display: block;
+  width: 14px;
+  height: 20px;
+  position: relative;
+}
+
+.tooltip__toogle {
+  display: block;
+  width: 14px;
+  height: 14px;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tooltip__icon {
+  fill: #000000;
+}
+
+.tooltip__text {
+  width: 164px;
+  position: absolute;
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--main-text-color);
+  background-color: var(--button-color);
+  border: 1px solid #B9B9B9;
+  border-radius: 1px;
+  box-shadow: 0 2px 12px rgba(173, 152, 143, 0.18);
+  padding: 10px 8px;
+  top: -20px;
+  right: -172px;
+  display: none;
+  z-index: 2;
+}
+
+.tooltip__text::after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  background-color: var(--button-color);
+  border: 1px solid;
+  border-color: var(--button-color) var(--button-color) #B9B9B9 #B9B9B9;
+  transform: rotate(45deg);
+  top: 21px;
+  left: -5px;
+}
+
+.tooltip__toogle:hover + .tooltip__text {
+  display: block;
 }
